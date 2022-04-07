@@ -10,6 +10,7 @@ dependencies {
   implementation(project(":main"))
 }
 
+/*
 val sourcesJar by tasks.registering(Jar::class) {
   archiveClassifier.set("sources")
   from(sourceSets["main"].allSource)
@@ -24,3 +25,5 @@ publishing {
     }
   }
 }
+*/
+

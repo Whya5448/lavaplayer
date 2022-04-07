@@ -11,6 +11,7 @@ dependencies {
   implementation("commons-io:commons-io:2.6")
 }
 
+/*
 val sourcesJar by tasks.registering(Jar::class) {
   archiveClassifier.set("sources")
   from(sourceSets["main"].allSource)
@@ -25,3 +26,4 @@ publishing {
     }
   }
 }
+*/

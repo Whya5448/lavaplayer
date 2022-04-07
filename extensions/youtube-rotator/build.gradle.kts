@@ -9,7 +9,7 @@ version = "0.2.3"
 dependencies {
   compileOnly(project(":main"))
 }
-
+/*
 val sourcesJar by tasks.registering(Jar::class) {
   archiveClassifier.set("sources")
   from(sourceSets["main"].allSource)
@@ -24,3 +24,4 @@ publishing {
     }
   }
 }
+*/

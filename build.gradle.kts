@@ -1,36 +1,37 @@
 plugins {
-  java
-  `maven-publish`
+    java
+    `maven-publish`
 }
 
 group = "com.sedmelluq"
 
 allprojects {
-  group = rootProject.group
+    group = rootProject.group
 
-  repositories {
-    mavenLocal()
-    mavenCentral()
-    maven(url = "https://m2.dv8tion.net/releases")
-  }
-
-  apply(plugin = "java")
-  apply(plugin = "maven-publish")
-
-  java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-  }
-
-  publishing {
     repositories {
-      maven {
-        setUrl("s3://m2.dv8tion.net/releases")
-        credentials(AwsCredentials::class) {
-          accessKey = project.findProperty("sedmelluqMavenS3AccessKey")?.toString()
-          secretKey = project.findProperty("sedmelluqMavenS3SecretKey")?.toString()
-        }
-      }
+        mavenCentral()
+        maven(url = "https://m2.dv8tion.net/releases")
     }
-  }
+
+    apply(plugin = "java")
+    apply(plugin = "maven-publish")
+
+    java {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+
+        withSourcesJar()
+        withJavadocJar()
+    }
+
+    publishing {
+        publications {
+            create<MavenPublication>("mavenJava") {
+                groupId = project.group as String?
+                artifactId = project.name
+                version = project.version as String?
+                from(components["java"])
+            }
+        }
+    }
 }
