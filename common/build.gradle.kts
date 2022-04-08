@@ -8,7 +8,6 @@ version = "1.1.2"
 
 dependencies {
   implementation("org.slf4j:slf4j-api:1.7.25")
-  implementation("commons-io:commons-io:2.6")
 }
 
 /*

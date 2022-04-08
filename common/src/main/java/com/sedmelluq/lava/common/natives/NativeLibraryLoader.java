@@ -1,18 +1,13 @@
 package com.sedmelluq.lava.common.natives;
 
 import com.sedmelluq.lava.common.natives.architecture.SystemType;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.FileAlreadyExistsException;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.function.Predicate;
-import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.*;
+import java.util.function.Predicate;
 
 import static java.nio.file.attribute.PosixFilePermissions.asFileAttribute;
 import static java.nio.file.attribute.PosixFilePermissions.fromString;
@@ -127,9 +122,7 @@ public class NativeLibraryLoader {
 
       Path extractedLibraryPath = prepareExtractionDirectory().resolve(systemType.formatLibraryName(libraryName));
 
-      try (FileOutputStream fileStream = new FileOutputStream(extractedLibraryPath.toFile())) {
-        IOUtils.copy(libraryStream, fileStream);
-      }
+      Files.copy(libraryStream, extractedLibraryPath);
 
       return extractedLibraryPath;
     } catch (IOException e) {
