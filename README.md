@@ -6,10 +6,10 @@ LavaPlayer is an audio player library written in Java which can load audio track
 
 #### Maven package
 
-Replace `x.y.z` with the latest version number: 1.3.77 
+Replace `x.y.z.m` with the latest version number: 1.3.78.1 
 
 * Repository: https://jitpack.io
-* Artifact: **whya5448/lavaplayer:x.y.z.m**
+* Artifact: **com.github.whya5448:lavaplayer:Module:x.y.z.m**
 
 Using in Gradle:
 ```gradle
