@@ -1,5 +1,12 @@
 # Change Log
 
+## [1.3.78.1] -- 2022-04-08
+### Fixed
+- remove invalid javadoc @return tag
+- update test library 
+- jitpack config update
+- update gradle 6.8.2 to 7.4.2
+
 ## [1.3.78] -- 2021-06-28
 ### Fixed
 - Fixed loading YouTube tracks with age verification.
