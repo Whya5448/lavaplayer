@@ -387,7 +387,7 @@ public class MusicController implements BotController {
   }
 
   private static void connectToFirstVoiceChannel(AudioManager audioManager) {
-    if (!audioManager.isConnected() && !audioManager.isAttemptingToConnect()) {
+    if (!audioManager.isConnected()) {
       for (VoiceChannel voiceChannel : audioManager.getGuild().getVoiceChannels()) {
         if ("Testing".equals(voiceChannel.getName())) {
           audioManager.openAudioConnection(voiceChannel);

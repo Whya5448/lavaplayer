@@ -10,7 +10,6 @@ allprojects {
 
     repositories {
         mavenCentral()
-        maven(url = "https://m2.dv8tion.net/releases")
     }
 
     apply(plugin = "java")
