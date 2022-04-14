@@ -11,10 +11,11 @@ import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.TextChannel;
 import net.dv8tion.jda.api.entities.VoiceChannel;
-import net.dv8tion.jda.api.events.message.guild.GuildMessageReceivedEvent;
+import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.managers.AudioManager;
 
+import javax.annotation.Nonnull;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -54,16 +55,17 @@ public class Main extends ListenerAdapter {
   }
 
   @Override
-  public void onGuildMessageReceived(GuildMessageReceivedEvent event) {
+  public void onMessageReceived(@Nonnull MessageReceivedEvent event) {
+    if(!event.isFromGuild()) return;
     String[] command = event.getMessage().getContentRaw().split(" ", 2);
 
     if ("~play".equals(command[0]) && command.length == 2) {
-      loadAndPlay(event.getChannel(), command[1]);
+      loadAndPlay(event.getTextChannel(), command[1]);
     } else if ("~skip".equals(command[0])) {
-      skipTrack(event.getChannel());
+      skipTrack(event.getTextChannel());
     }
 
-    super.onGuildMessageReceived(event);
+    super.onMessageReceived(event);
   }
 
   private void loadAndPlay(final TextChannel channel, final String trackUrl) {
@@ -116,7 +118,7 @@ public class Main extends ListenerAdapter {
   }
 
   private static void connectToFirstVoiceChannel(AudioManager audioManager) {
-    if (!audioManager.isConnected() && !audioManager.isAttemptingToConnect()) {
+    if (!audioManager.isConnected()) {
       for (VoiceChannel voiceChannel : audioManager.getGuild().getVoiceChannels()) {
         audioManager.openAudioConnection(voiceChannel);
         break;
