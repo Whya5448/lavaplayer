@@ -8,6 +8,7 @@ version = "0.2.3"
 
 dependencies {
   compileOnly(project(":main"))
+  implementation("org.apache.httpcomponents:httpclient:4.5.13")
 }
 /*
 val sourcesJar by tasks.registering(Jar::class) {
