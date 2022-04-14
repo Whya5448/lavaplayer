@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.3.78.2] -- 2022-04-08
+### Removed
+- Remove Commons-IO dependency
+
 ## [1.3.78.1] -- 2022-04-08
 ### Fixed
 - remove invalid javadoc @return tag
