@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.3.78.3] -- 2022-04-08
+### Changed
+- Update vulnerable dependencies
+
 ## [1.3.78.2] -- 2022-04-08
 ### Removed
 - Remove Commons-IO dependency
