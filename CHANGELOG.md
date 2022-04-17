@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.3.78.4] -- 2022-04-08
+### Added
+- Add natvies library dependency
+
 ## [1.3.78.3] -- 2022-04-08
 ### Changed
 - Update vulnerable dependencies
