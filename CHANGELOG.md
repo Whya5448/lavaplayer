@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.3.78.6] -- 2022-04-17
+### Changed
+- Changed JavaVersion to 1.8
+
 ## [1.3.78.5] -- 2022-04-17
 ### Changed
 - Changed Jitpack artifact names
