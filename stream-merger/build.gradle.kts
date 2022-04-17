@@ -7,7 +7,7 @@ val moduleName = "lavaplayer-stream-merger"
 version = "0.1.0"
 
 dependencies {
-  implementation(project(":main"))
+  implementation(project(":lavaplayer"))
 }
 
 /*

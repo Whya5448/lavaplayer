@@ -24,7 +24,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'com.github.whya5448.lavaplayer:main:x.y.z.m'
+  implementation 'com.github.whya5448.lavaplayer:lavaplayer:x.y.z.m'
 }
 ```
 

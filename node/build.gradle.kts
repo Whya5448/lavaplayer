@@ -6,7 +6,7 @@ plugins {
 version = "1.2.50"
 
 dependencies {
-  implementation(project(":main"))
+  implementation(project(":lavaplayer"))
   implementation("org.springframework.boot:spring-boot-starter-web:2.1.2.RELEASE")
 }
 

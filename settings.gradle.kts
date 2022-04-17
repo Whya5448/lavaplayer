@@ -1,5 +1,9 @@
-include("common")
-include("main")
+include("lavaplayer-common")
+project(":lavaplayer-common").projectDir = file("common")
+
+include("lavaplayer")
+project(":lavaplayer").projectDir = file("main")
+
 include("testbot")
 include("node")
 include("stream-merger")

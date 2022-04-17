@@ -1,4 +1,4 @@
 jdk:
   - openjdk17
 install:
-  - ./gradlew clean :common:build :common:publishToMavenLocal :main:build :main:publishToMavenLocal
+  - ./gradlew clean :lavaplayer-common:build :lavaplayer-common:publishToMavenLocal :lavaplayer:build :lavaplayer:publishToMavenLocal

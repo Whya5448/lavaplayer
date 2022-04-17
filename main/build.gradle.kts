@@ -8,7 +8,7 @@ val moduleName = "lavaplayer"
 version = "1.3.78.4"
 
 dependencies {
-  api(project(":common"))
+  api(project(":lavaplayer-common"))
   implementation("com.github.whya5448:lavaplayer-natives:1.3.14.0")
 
   implementation("org.apache.httpcomponents:httpclient:4.5.13")

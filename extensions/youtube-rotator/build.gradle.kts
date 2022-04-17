@@ -7,7 +7,7 @@ val moduleName = "lavaplayer-ext-youtube-rotator"
 version = "0.2.3"
 
 dependencies {
-  compileOnly(project(":main"))
+  compileOnly(project(":lavaplayer"))
   implementation("org.apache.httpcomponents:httpclient:4.5.13")
 }
 /*
