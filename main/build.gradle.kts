@@ -9,7 +9,7 @@ version = "1.3.78.3"
 
 dependencies {
   api(project(":common"))
-  //implementation("com.sedmelluq:lavaplayer-natives:1.3.14")
+  implementation("com.github.whya5448:lavaplayer-natives:1.3.14.0")
 
   implementation("org.apache.httpcomponents:httpclient:4.5.13")
   implementation("commons-io:commons-io:2.7")

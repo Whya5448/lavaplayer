@@ -10,6 +10,7 @@ allprojects {
 
     repositories {
         mavenCentral()
+        maven(url = "https://jitpack.io")
     }
 
     apply(plugin = "java")
