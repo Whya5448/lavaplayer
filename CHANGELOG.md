@@ -1,14 +1,18 @@
 # Change Log
 
-## [1.3.78.4] -- 2022-04-08
+## [1.3.78.5] -- 2022-04-17
+### Changed
+- Changed Jitpack artifact names
+
+## [1.3.78.4] -- 2022-04-17
 ### Added
 - Add natvies library dependency
 
-## [1.3.78.3] -- 2022-04-08
+## [1.3.78.3] -- 2022-04-14
 ### Changed
 - Update vulnerable dependencies
 
-## [1.3.78.2] -- 2022-04-08
+## [1.3.78.2] -- 2022-04-14
 ### Removed
 - Remove Commons-IO dependency
 
