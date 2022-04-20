@@ -1,5 +1,9 @@
 # Change Log
 
+## [1.3.78.7] -- 2022-04-20
+### Changed
+- Update lavaplayer-natives version to 1.3.14.1 
+
 ## [1.3.78.6] -- 2022-04-17
 ### Changed
 - Changed JavaVersion to 1.8
